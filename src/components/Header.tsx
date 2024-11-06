@@ -2,7 +2,7 @@ import Image from 'next/image';
 
 const Header = () => (
   <div
-    className="flex flex-row gap-x-[1vw] justify-between
+    className="flex flex-row gap-x-[1vw] justify-between bg-black
     items-center border-b-black border-b-[2px] lg:pl-[10vw] lg:pr-[10vw] px-[25px]"
   >
     <Image
