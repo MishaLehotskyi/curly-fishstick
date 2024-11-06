@@ -6,6 +6,7 @@ interface Section {
   list?: string[];
 }
 
+
 const textContent: Section[] = [
   {
     title: 'Промоакции и Бонусы Онлайн-Казино',
