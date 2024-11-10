@@ -44,20 +44,37 @@ const textContent: Section[] = [
   }
 ];
 
+const cardsContent = [{
+  mediaUrl: 'banda-gif.mp4',
+  description: '800 фриспинов',
+  code: 'CASINOHUB',
+  url: 'https://play-banda-one.com/d300573ec',
+}, {
+  mediaUrl: 'lex1.MP4',
+  description: '150% бонуса и до 500 фриспинов на первый депозит по ПРОМОКОДУ FreeRoyal',
+  code: 'FreeRoyal',
+  url: 'https://gzb-ircp01.com/cc7eb5933'
+},{
+  mediaUrl: '/gizboph.jpg',
+  description: '150% бонуса и до 500 фриспинов на первый депозит по ПРОМОКОДУ FreeRoyal',
+  code: 'FreeRoyal',
+  url: 'https://1go-ircp01.com/c83a3ae77',
+  photo: true
+}, {
+  mediaUrl: '/1go.jpg',
+  description: '150% бонуса и до 500 фриспинов на первый депозит по ПРОМОКОДУ FreeRoyal',
+  code: 'FreeRoyal',
+  url: 'https://lex-ircp01.com/c96d95a4e',
+  photo: true
+}]
+
 const MainContent = () => (
   <div className="flex flex-col gap-y-[40px]">
     <div
       className="grid grid-cols-1 lg:grid-cols-4 lg:pl-[10vw] lg:pr-[10vw] lg:pt-[25px] lg:pb-[25px] p-[25px] gap-[10px] lg:gap-[2.6vw]">
-      <Card/>
-      <Card/>
-      <Card/>
-      <Card/>
-      <Card/>
-      <Card/>
-      <Card/>
-      <Card/>
-      <Card/>
-      <Card/>
+      {cardsContent.map((card) => (
+        <Card key={card.url} url={card.url} mediaUrl={card.mediaUrl} code={card.code} description={card.description} photo={card.photo} />
+      ))}
     </div>
     <div className="flex flex-col gap-y-[30px] lg:pl-[10vw] lg:pr-[10vw] p-[25px]">
       {textContent.map((item) => (
