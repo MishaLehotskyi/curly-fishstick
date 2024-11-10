@@ -29,19 +29,19 @@ const Card: React.FC<CardProps> = ({
   return(
     <div
       className="border-[2px] border-black rounded-md flex flex-col gap-y-[20px] items-center py-[15px] bg-black text-white justify-between overflow-hidden">
-      {photo
-        ? (
-          <div className="flex justify-center items-center h-[240px] mt-[-15px]" >
+      <div className="flex justify-center items-center min-h-[320px] mt-[-15px]" >
+        {photo
+          ? (
             <Image src={mediaUrl} alt="casino-gambling-game" width={400} height={270} />
-          </div>
-        )
-        : (
-          <video autoPlay muted loop className="mt-[-15px]">
-            <source src={mediaUrl}
-              type="video/mp4"/>
-          </video>
-        )
-      }
+          )
+          : (
+            <video autoPlay muted loop playsInline className="mt-[-15px]">
+              <source src={mediaUrl}
+                type="video/mp4"/>
+            </video>
+          )
+        }
+      </div>
 
       <h2 className="w-[80%] text-center">{description}</h2>
       <div
